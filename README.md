@@ -1,4 +1,5 @@
 # nmap-githubactions
+[![nmap nse vuln CI workflow](https://github.com/githubfoam/nmap-githubactions/actions/workflows/nmap-nse-vuln.yml/badge.svg)](https://github.com/githubfoam/nmap-githubactions/actions/workflows/nmap-nse-vuln.yml)  
 
 ~~~~
 
