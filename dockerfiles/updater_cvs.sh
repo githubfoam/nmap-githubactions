@@ -54,8 +54,6 @@ do
     logIfDebug "Downloading ${file}..."
     wget --quiet --no-check-certificate ${file}
     filename=$(echo ${file} | awk -F/ '{print $NF}')
-    # result=$(diff --suppress-common-lines --speed-large-files -y ${filename} ../../../${filename} | wc -l)
-    result=$(diff ${filename} ../${filename} | wc -l)
     result=$(cmp -s ${filename} ../${filename} && echo $?)    
     
     if [ ${result} -ne 0 ]; then
