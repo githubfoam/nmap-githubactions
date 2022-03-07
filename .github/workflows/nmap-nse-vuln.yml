@@ -3,7 +3,7 @@ name: "nmap nse vuln CI workflow"
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
 
 
 jobs:
