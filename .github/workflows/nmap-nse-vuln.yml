@@ -41,10 +41,6 @@ jobs:
         docker image inspect ${name}:${version} 
         # find ENTRYPOINT & CMD on an image
         docker inspect -f '{{.Config.Entrypoint}}' ${name}:${version}
-        # docker run -i alpine/nmap-nse-vuln:latest nmap -h #OK
-        # docker run alpine/nmap-nse-vuln:latest nmap -h #OK
-        # docker run alpine/nmap-nse-vuln:latest nmap -v -A scanme.nmap.org #OK
-        docker run ${name}:${version} --script-help "*" | grep Categories |wc -l 
         # docker run alpine/nmap-nse-vuln:latest \
         #   nmap -sV --script=vulscan/vulscan.nse scanme.nmap.org #OK
         # use a single database
